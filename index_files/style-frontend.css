@@ -548,18 +548,18 @@
 	color: #afb6bb;
 }
 
-/* Google Plus */
-.dpsp-networks-btns-wrapper .dpsp-network-btn.dpsp-gplus .dpsp-network-icon,
-.dpsp-networks-btns-wrapper .dpsp-network-btn.dpsp-gplus {
-	border-color: #dd4b39;
-	background: #dd4b39;
-	color: #dd4b39;
+/* Instagram */
+.dpsp-networks-btns-wrapper .dpsp-network-btn.dpsp-instagram .dpsp-network-icon,
+.dpsp-networks-btns-wrapper .dpsp-network-btn.dpsp-instagram {
+	border-color: #dd2a7b;
+	background: #dd2a7b;
+	color: #dd2a7b;
 }
 .dpsp-networks-btns-wrapper .dpsp-network-btn.dpsp-gplus:hover .dpsp-network-icon,
 .dpsp-networks-btns-wrapper .dpsp-network-btn.dpsp-gplus:hover {
-	border-color: #ad3b2c;
-	background: #ad3b2c;
-	color: #ad3b2c;
+	border-color: #af2060;
+	background: #af2060;
+	color: #af2060;
 }
 
 /* WhatsApp */
