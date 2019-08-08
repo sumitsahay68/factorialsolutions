@@ -75,7 +75,35 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 <!--COMMON-ENDS-->
 		<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
 
-<body class="home page-template page-template-template-frontpage page-template-template-frontpage-php page page-id-1367 wp-custom-logo body-desktop">
+
+<!--gallery shuffle script-->
+<script type="text/javascript">
+	function gallery_shuffle(){
+    $files = array();
+    $handle=opendir("./gallery");
+    while (($file = readdir($handle))!==false) {
+        if(is_file($file))
+           $files.push($file);
+    }
+
+    console.log($files);
+    
+    shuffle($files);
+    $ctr = 0;
+    $ind;
+    foreach($files as $f)
+    {
+        //process file here
+        $x = "gallery-image";
+        $image_id = x.concat((ctr+1).toString());
+        document.getElementById($image_id).setAttribute('src',$f);
+        if($ctr++>=15)
+         break;
+    }
+}
+</script>
+<!--script ends-->
+<body class="home page-template page-template-template-frontpage page-template-template-frontpage-php page page-id-1367 wp-custom-logo body-desktop" onload="gallery_shuffle()">
 
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="./index.html/#content">Skip to content</a>
@@ -237,7 +265,7 @@ challenges of today’s competitive business environment with proficiency.</p>
                                 <div class="service-item ">
                                                                                                             <div class="service-image icon-image"><img src="./index_files/logo-jobronto.jpg" alt="JobRonto - A universal hiring platform"></img></div>                                    <div class="service-content">
                                         <h4 class="service-title">JobRonto</h4>
-                                        <p>A universal hiring platform for Corporates, Candidates, and Consultants. JobRonto works on a basic principle of connecting the three elements Corporates, who have open positions., Candidates, who are looking for jobs and Consultants., who are a mix of headhunters, recruitment firms or everybody else who’s in a position to recommend the right fit candidate for a given job across the globe/universe in exchange of handsome cash rewards/referral fee.</p>
+                                        <p>JobRonto works on a basic principle of connecting the three elements Corporates, who have open positions., Candidates, who are looking for jobs and Consultants., who are a mix of headhunters, recruitment firms or everybody else who’s in a position to recommend the right fit candidate for a given job across the globe/universe in exchange of handsome cash rewards/referral fee.</p>
                                                                             </div>
                                 </div>
                             </div>
@@ -270,36 +298,36 @@ challenges of today’s competitive business environment with proficiency.</p>
 </div>            </div>
                 <div class="gallery-content">
             <div data-col="5" class="g-zoom-in gallery-masonry  enable-lightbox  gallery-grid g-col-5" style="position: relative; height: 410.176px;">
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-171292.jpeg" class="g-item" title="pexels-photo-171292" style="width: 20%; float: left; padding: 0px; position: absolute; left: 0%; top: 0px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-171292-1024x682.jpeg" alt="pexels-photo-171292"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-171292.jpeg" class="g-item" title="pexels-photo-171292" style="width: 20%; float: left; padding: 0px; position: absolute; left: 0%; top: 0px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-171292-1024x682.jpeg" alt="pexels-photo-171292" id="gallery-image1"></span></span></a>
 
-            	<a href="./index_files/blog1.jpg" class="g-item" title="blog1" style="width: 20%; float: left; padding: 0px; position: absolute; left: 19.9447%; top: 0px;"><span class="inner"><span class="inner-content"><img src="./index_files/blog1-1024x680.jpg" alt="blog1"></span></span></a>
+            	<a href="./index_files/blog1.jpg" class="g-item" title="blog1" style="width: 20%; float: left; padding: 0px; position: absolute; left: 19.9447%; top: 0px;"><span class="inner"><span class="inner-content"><img src="./index_files/blog1-1024x680.jpg" alt="blog1" id="gallery-image2"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/02/blog4-1.jpg" class="g-item" title="blog4" style="width: 20%; float: left; padding: 0px; position: absolute; left: 39.9552%; top: 0px;"><span class="inner"><span class="inner-content"><img src="./index_files/blog4-1-1024x682.jpg" alt="blog4"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/02/blog4-1.jpg" class="g-item" title="blog4" style="width: 20%; float: left; padding: 0px; position: absolute; left: 39.9552%; top: 0px;"><span class="inner"><span class="inner-content"><img src="./index_files/blog4-1-1024x682.jpg" alt="blog4" id="gallery-image3"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/02/blog2.jpg" class="g-item" title="blog2" style="width: 20%; float: left; padding: 0px; position: absolute; left: 59.9658%; top: 0px;"><span class="inner"><span class="inner-content"><img src="./index_files/blog2-1024x682.jpg" alt="blog2"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/02/blog2.jpg" class="g-item" title="blog2" style="width: 20%; float: left; padding: 0px; position: absolute; left: 59.9658%; top: 0px;"><span class="inner"><span class="inner-content"><img src="./index_files/blog2-1024x682.jpg" alt="blog2" id="gallery-image4"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/02/business1.jpg" class="g-item" title="business1" style="width: 20%; float: left; padding: 0px; position: absolute; left: 79.9763%; top: 0px;"><span class="inner"><span class="inner-content"><img src="./index_files/business1-1024x683.jpg" alt="business1"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/02/business1.jpg" class="g-item" title="business1" style="width: 20%; float: left; padding: 0px; position: absolute; left: 79.9763%; top: 0px;"><span class="inner"><span class="inner-content"><img src="./index_files/business1-1024x683.jpg" alt="business1" id="gallery-image5"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-186077.jpeg" class="g-item" title="pexels-photo-186077" style="width: 20%; float: left; padding: 0px; position: absolute; left: 19.9447%; top: 202px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-186077-1024x698.jpeg" alt="pexels-photo-186077"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-186077.jpeg" class="g-item" title="pexels-photo-186077" style="width: 20%; float: left; padding: 0px; position: absolute; left: 19.9447%; top: 202px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-186077-1024x698.jpeg" alt="pexels-photo-186077" id="gallery-image6"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-66463-1.jpeg" class="g-item" title="pexels-photo-66463" style="width: 20%; float: left; padding: 0px; position: absolute; left: 0%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-66463-1-1024x682.jpeg" alt="pexels-photo-66463"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-66463-1.jpeg" class="g-item" title="pexels-photo-66463" style="width: 20%; float: left; padding: 0px; position: absolute; left: 0%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-66463-1-1024x682.jpeg" alt="pexels-photo-66463" id="gallery-image7"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-106344.jpeg" class="g-item" title="pexels-photo-106344" style="width: 20%; float: left; padding: 0px; position: absolute; left: 39.9552%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-106344-1024x683.jpeg" alt="pexels-photo-106344"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-106344.jpeg" class="g-item" title="pexels-photo-106344" style="width: 20%; float: left; padding: 0px; position: absolute; left: 39.9552%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-106344-1024x683.jpeg" alt="pexels-photo-106344" id="gallery-image8"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/02/hero4.jpg" class="g-item" title="hero4" style="width: 20%; float: left; padding: 0px; position: absolute; left: 59.9658%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/hero4-1024x681.jpg" alt="hero4"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/02/hero4.jpg" class="g-item" title="hero4" style="width: 20%; float: left; padding: 0px; position: absolute; left: 59.9658%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/hero4-1024x681.jpg" alt="hero4" id="gallery-image9"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/macbook-laptop-ipad-apple-38519.jpeg" class="g-item" title="macbook-laptop-ipad-apple-38519" style="width: 20%; float: left; padding: 0px; position: absolute; left: 79.9763%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/macbook-laptop-ipad-apple-38519-1024x680.jpeg" alt="macbook-laptop-ipad-apple-38519"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/macbook-laptop-ipad-apple-38519.jpeg" class="g-item" title="macbook-laptop-ipad-apple-38519" style="width: 20%; float: left; padding: 0px; position: absolute; left: 79.9763%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/macbook-laptop-ipad-apple-38519-1024x680.jpeg" alt="macbook-laptop-ipad-apple-38519" id="gallery-image10"></span></span></a>
 
             	<!--additional photos-->
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-186077.jpeg" class="g-item" title="pexels-photo-186077" style="width: 20%; float: left; padding: 0px; position: absolute; left: 19.9447%; top: 202px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-186077-1024x698.jpeg" alt="pexels-photo-186077"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-186077.jpeg" class="g-item" title="pexels-photo-186077" style="width: 20%; float: left; padding: 0px; position: absolute; left: 19.9447%; top: 202px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-186077-1024x698.jpeg" alt="pexels-photo-186077" id="gallery-image11"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-66463-1.jpeg" class="g-item" title="pexels-photo-66463" style="width: 20%; float: left; padding: 0px; position: absolute; left: 0%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-66463-1-1024x682.jpeg" alt="pexels-photo-66463"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-66463-1.jpeg" class="g-item" title="pexels-photo-66463" style="width: 20%; float: left; padding: 0px; position: absolute; left: 0%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-66463-1-1024x682.jpeg" alt="pexels-photo-66463" id="gallery-image12"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-106344.jpeg" class="g-item" title="pexels-photo-106344" style="width: 20%; float: left; padding: 0px; position: absolute; left: 39.9552%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-106344-1024x683.jpeg" alt="pexels-photo-106344"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/pexels-photo-106344.jpeg" class="g-item" title="pexels-photo-106344" style="width: 20%; float: left; padding: 0px; position: absolute; left: 39.9552%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/pexels-photo-106344-1024x683.jpeg" alt="pexels-photo-106344" id="gallery-image13"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/02/hero4.jpg" class="g-item" title="hero4" style="width: 20%; float: left; padding: 0px; position: absolute; left: 59.9658%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/hero4-1024x681.jpg" alt="hero4"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/02/hero4.jpg" class="g-item" title="hero4" style="width: 20%; float: left; padding: 0px; position: absolute; left: 59.9658%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/hero4-1024x681.jpg" alt="hero4" id="gallery-image14"></span></span></a>
 
-            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/macbook-laptop-ipad-apple-38519.jpeg" class="g-item" title="macbook-laptop-ipad-apple-38519" style="width: 20%; float: left; padding: 0px; position: absolute; left: 79.9763%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/macbook-laptop-ipad-apple-38519-1024x680.jpeg" alt="macbook-laptop-ipad-apple-38519"></span></span></a>
+            	<a href="http://localhost/factorialsolutions/wp-content/uploads/2016/10/macbook-laptop-ipad-apple-38519.jpeg" class="g-item" title="macbook-laptop-ipad-apple-38519" style="width: 20%; float: left; padding: 0px; position: absolute; left: 79.9763%; top: 203px;"><span class="inner"><span class="inner-content"><img src="./index_files/macbook-laptop-ipad-apple-38519-1024x680.jpeg" alt="macbook-laptop-ipad-apple-38519" id="gallery-image15"></span></span></a>
             	<!--additional-photos-end-->
             </div>
         </div>
