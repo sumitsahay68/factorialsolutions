@@ -2778,6 +2778,52 @@ section > .customize-partial-edit-shortcut button {
 .parallax-content p, .parallax-content a {
   color: #FFFFFF;
 }
+/*
+added by sumit for button over parallax*/
+.section-parallax .container .parallax-button {
+  position: absolute;
+  top: 191%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+  font-size: 100%;
+  padding: 12px 24px;
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.section-parallax .container .parallax-button span{
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.section-parallax .container .parallax-button span:after{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: -35%;
+  bottom: 50%;
+  font-size: 150%;
+  transition: 0.5s
+}
+.section-parallax .container .parallax-button:hover span{
+  padding-right: 18px;
+}
+.section-parallax .container .parallax-button:hover span:after{
+  opacity: 1;
+  right: 0;
+}
+.section-parallax .container .parallax-button:hover {
+  color: black;
+  font-weight: 500;
+  background-color: white;
+  box-shadow: 0px 15px 20px rgba(33, 33, 33, 0.4);
+}
+/*ends here*/
+
 
 /* Section: Team
 ------------------------------*/
