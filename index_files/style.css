@@ -2792,7 +2792,7 @@ added by sumit for button over parallax*/
   padding: 12px 24px;
   border: 1px solid white;
   cursor: pointer;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   text-align: center;
 }
 .section-parallax .container .parallax-button span{
