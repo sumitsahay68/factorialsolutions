@@ -77,33 +77,57 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 
 
 <!--gallery shuffle script-->
-<script type="text/javascript">
-	function gallery_shuffle(){
-    $files = array();
-    $handle=opendir("./gallery");
-    while (($file = readdir($handle))!==false) {
-        if(is_file($file))
-           $files.push($file);
-    }
 
-    console.log($files);
-    
-    shuffle($files);
-    $ctr = 0;
-    $ind;
-    foreach($files as $f)
-    {
-        //process file here
-        $x = "gallery-image";
-        $image_id = x.concat((ctr+1).toString());
-        document.getElementById($image_id).setAttribute('src',$f);
-        if($ctr++>=15)
-         break;
-    }
-}
+<script type="text/javascript" src="./gallery/gallery_shuffleee.js">
+	/*function randomize(array){
+		var i = 0;
+    	var j = 0;
+    	var temp = null;
+
+		for (i = array.length - 1; i > 0; i --) {
+		  j = Math.floor(Math.random() * (i + 1));
+		  temp = array[i];
+		  array[i] = array[j];
+		  array[j] = temp;
+        }
+        return temp;
+	}
+
+
+	function gallery_shuffle(){
+	    var files = [];
+	    var path = './gallery/';
+	    var files =get_files(path).split('|').sort();
+	    /*while ((file = readdir(handle))!==false) {
+	        if(is_file(file))
+	           files.push(file);
+	    }
+
+		fileName = findFirstFile("*.*"); // Find the first file matching the filter 
+		while(fileName.length) 
+		{ 
+		    write(fileName); 
+		    fileName = findNextFile();  // Find the next file matching the filter 
+		}
+
+	    console.log(files);
+	    
+	    files =randomize(files); 
+	    var ctr = 0;
+	    var ind;
+	    for(ctr=0;ctr<files.length;ctr++)
+	    {
+	        //process file here
+	        var x = "gallery-image";
+	        var image_id = x.concat((ctr+1).toString());
+	        document.getElementById(image_id).setAttribute('src',f);
+	        if(ctr++>=15)
+	         break;
+	    }
+    }*/
 </script>
 <!--script ends-->
-<body class="home page-template page-template-template-frontpage page-template-template-frontpage-php page page-id-1367 wp-custom-logo body-desktop" onload="gallery_shuffle()">
+<body class="home page-template page-template-template-frontpage page-template-template-frontpage-php page page-id-1367 wp-custom-logo body-desktop">
 
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="./index.html/#content">Skip to content</a>
@@ -137,7 +161,7 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 			</div>
 		</header></div><!-- #masthead -->
 		<!--HERO-SECTION-->
-			<section id="hero" data-images="[&quot;.\/index_files\/banner1.png&quot;,&quot;.\/index_files\/banner2.jpg&quot;]" class="hero-slideshow-wrapper hero-slideshow-normal loaded" style="position: relative; z-index: 0; background: none;">
+			<section id="hero" data-images="[&quot;.\/index_files\/banner1.jpg&quot;,&quot;.\/index_files\/banner2.jpg&quot;]" class="hero-slideshow-wrapper hero-slideshow-normal loaded" style="position: relative; z-index: 0; background: none;">
 
 					
 		
@@ -146,7 +170,7 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 						<h2 class="hero-large-text">We are <span class="js-rotating morphext"><span class="animated flipInX">Factorial | Responsive | One Page</span></span></h2>						<p class="hero-small-text"></p><p>Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin quisque vitae placerat.</p>
 <p></p>						<a href="./index.html/#services" class="btn btn-theme-primary btn-lg">Our Services</a>						<a href="./index.html/#contact" class="btn btn-secondary-outline btn-lg">Get Started</a>					</div>
 				</div>
-					<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 610px; width: 1519px; z-index: -999998; position: absolute;"><img src="./index_files/banner1.png" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1519px; height: 1012.67px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -201.333px;"></div></section>
+					<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 610px; width: 1519px; z-index: -999998; position: absolute;"><img src="./index_files/banner1.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1519px; height: 1012.67px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -201.333px;"></div></section>
 					<!--HERO SECTION ENDS-->
 </div>
 
@@ -164,18 +188,18 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 </div>				</div>
 								<div class="row">
 												<div class="col-lg-4 col-sm-6  wow slideInUp" style="visibility: hidden; animation-name: none;">
-																	<div class="about-image"><img width="640" height="350" src="./index_files/about1-640x350.jpg" class="attachment-onepress-medium size-onepress-medium wp-post-image" alt="" srcset="http://localhost/factorialsolutions/wp-content/uploads/2016/02/about1.jpg 640w, http://localhost/factorialsolutions/wp-content/uploads/2016/02/about1-300x164.jpg 300w" sizes="(max-width: 640px) 100vw, 640px"></div>
+																	<div class="about-image"><img width="640" height="350" src="./index_files/about1-640x350.jpg" class="attachment-onepress-medium size-onepress-medium wp-post-image" alt="" srcset="./index_files/about1.jpg 640w, ./index_files/about1-300x164.jpg 300w" sizes="(max-width: 640px) 100vw, 640px"></div>
 																									<h3>Our Job</h3>
 																<p><strong>Our job&nbsp;</strong>is to provide a wide array of &nbsp;services to match&nbsp;&nbsp;the complex and rapidly changing needs of our clients&nbsp;across different boundaries and industry segments.</p>
 							</div>
 														<div class="col-lg-4 col-sm-6  wow slideInUp" style="visibility: hidden; animation-name: none;">
-																	<div class="about-image"><img width="640" height="350" src="./index_files/about3-640x350.jpg" class="attachment-onepress-medium size-onepress-medium wp-post-image" alt="" srcset="http://localhost/factorialsolutions/wp-content/uploads/2016/02/about3.jpg 640w, http://localhost/factorialsolutions/wp-content/uploads/2016/02/about3-300x164.jpg 300w" sizes="(max-width: 640px) 100vw, 640px"></div>
+																	<div class="about-image"><img width="640" height="350" src="./index_files/about3-640x350.jpg" class="attachment-onepress-medium size-onepress-medium wp-post-image" alt="" srcset="./index_files/about3.jpg 640w, ./index_files/about3-300x164.jpg 300w" sizes="(max-width: 640px) 100vw, 640px"></div>
 																									<h3>Our Mission</h3>
 																<p><strong>Our mission&nbsp;</strong>is to provide timely, effective and reliable &nbsp;solutions&nbsp;that match the unique needs of our clients and assist them in meeting the<br>
 challenges of today’s competitive business environment with proficiency.</p>
 							</div>
 														<div class="col-lg-4 col-sm-6  wow slideInUp" style="visibility: hidden; animation-name: none;">
-																	<div class="about-image"><img width="640" height="350" src="./index_files/about2-640x350.jpg" class="attachment-onepress-medium size-onepress-medium wp-post-image" alt="" srcset="http://localhost/factorialsolutions/wp-content/uploads/2016/02/about2.jpg 640w, http://localhost/factorialsolutions/wp-content/uploads/2016/02/about2-300x164.jpg 300w" sizes="(max-width: 640px) 100vw, 640px"></div>
+																	<div class="about-image"><img width="640" height="350" src="./index_files/about2-640x350.jpg" class="attachment-onepress-medium size-onepress-medium wp-post-image" alt="" srcset="./index_files/about2.jpg 640w, ./index_files/about2-300x164.jpg 300w" sizes="(max-width: 640px) 100vw, 640px"></div>
 																									<h3>Our Efforts</h3>
 																<p><strong>Our effort&nbsp;</strong>is to be an equal-opportunity employer and create an environment of trust and confidence amongst our employees who take pride in working as one big family.</p>
 							</div>
@@ -509,7 +533,7 @@ challenges of today’s competitive business environment with proficiency.</p>
 
 	<!--<li><a rel="nofollow" href="https://twitter.com/intent/tweet?text=Home&amp;url=http%3A%2F%2Flocalhost%2Ffactorialsolutions%2F" class="dpsp-network-btn dpsp-twitter dpsp-no-label"><span class="dpsp-network-icon"></span><span class="dpsp-network-label-wrapper"></span></a></li>-->
 
-	<li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%2Ffactorialsolutions%2F&amp;title=Home&amp;mini=true" target="_blank" title="LinkedIn" class="dpsp-network-btn dpsp-linkedin dpsp-no-label"><span class="dpsp-network-icon"></span><span class="dpsp-network-label-wrapper"></span></a></li>
+	<li><a rel="nofollow" href="https://www.linkedin.com/company/factorialsolutions/" target="_blank" title="LinkedIn" class="dpsp-network-btn dpsp-linkedin dpsp-no-label"><span class="dpsp-network-icon"></span><span class="dpsp-network-label-wrapper"></span></a></li>
 
 	<li><a rel="nofollow" href="https://api.whatsapp.com/send?phone=919818394466" data-action="share/whatsapp/share" target="_blank" title="WhatsApp" class="dpsp-network-btn dpsp-whatsapp dpsp-no-label"><span class="dpsp-network-icon"></span><span class="dpsp-network-label-wrapper"></span></a></li>
 
