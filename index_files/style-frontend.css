@@ -523,15 +523,15 @@
 /* Email */
 .dpsp-networks-btns-wrapper .dpsp-network-btn.dpsp-email .dpsp-network-icon,
 .dpsp-networks-btns-wrapper .dpsp-network-btn.dpsp-email {
-	border-color: #27ae60;
-	background: #27ae60;
-	color: #27ae60;
+	border-color: #d44638;
+	background: #d44638;
+	color: #d44638;
 }
 .dpsp-networks-btns-wrapper .dpsp-network-btn.dpsp-email:hover .dpsp-network-icon,
 .dpsp-networks-btns-wrapper .dpsp-network-btn.dpsp-email:hover {
-	border-color: #239e57;
-	background: #239e57;
-	color: #239e57;
+	border-color: #b23121;
+	background: #b23121;
+	color: #b23121;
 }
 
 /* Print */

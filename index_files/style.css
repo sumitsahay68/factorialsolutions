@@ -737,6 +737,7 @@ Footer widgets
   box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.06);
 }
 .site-header.header-fixed {
+  padding-top: 0.5%;
   top: 0px;
   left: 0px;
   position: fixed;
@@ -1023,8 +1024,8 @@ Footer widgets
  /*editing by Sumit*/
 
  .onepress-menu a:hover{
-   text-decoration: none ;
-   border-bottom: 2px solid #f73138;
+   text-decoration: underline; ;
+   /*border-bottom: 2px solid #f73138;*/
    text-decoration-color: #f73138;
  } 
   /*editing ends*/
