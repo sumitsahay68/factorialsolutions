@@ -2538,7 +2538,7 @@ section > .customize-partial-edit-shortcut button {
   display: inline-block;
 }
 
-/* Section: Features
+/* Section: Features(Services)
 ------------------------------*/
 .icon-background-default {
   color: #03c4eb;
@@ -2588,7 +2588,7 @@ section > .customize-partial-edit-shortcut button {
   margin-top: 30px;
 }
 
-/* Section: Services
+/* Section: Services (OtherServices)
 ------------------------------*/
 .section-services .service-item {
   background: #FFFFFF;
