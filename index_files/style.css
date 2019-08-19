@@ -2783,7 +2783,7 @@ section > .customize-partial-edit-shortcut button {
 added by sumit for button over parallax*/
 .section-parallax .container .parallax-button {
   position: absolute;
-  top: 191%;
+  top: 125%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
