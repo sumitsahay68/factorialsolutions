@@ -80,6 +80,41 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 <script src="./index_files/custom-anims/morphext.min.js"></script>
 
 <!--ends here-->
+
+<!--underline heading script imports and css-->
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<style id="jsbin-css">
+h2#section-title{
+ text-align:center;
+}
+h2#section-title span{
+  display:inline-block;
+  position:relative;
+  overflow:hidden;
+}
+h2#section-title span:after,
+h2#section-title span:before{
+  content:"";
+  height:3px;
+  width:100%;
+  position:absolute;
+  bottom:0px;
+  left:0;
+  transition: 3s;
+}
+h2#section-title span:before{
+  background:#ffffff;
+}
+/* We'll animate this one to -75% */
+h2#section-title span:after{ 
+  background:#FE0700;
+  left:100%;
+}
+h2#section-title span.animateLine:after{
+  left: -0%;
+}
+</style>
+<!--underline import ends-->
 		<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
 
 
@@ -142,7 +177,7 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 		
 						<div class="container">
 								<div class="section-title-area">
-				<!--<h5 class="section-subtitle">Welcome to Factorial Solutions</h5>-->					<h2 class="section-title">About Us</h2>					<div class="section-desc"><p>We are one of the leading entrepreneurial expansion consulting organization with global headquarter in <strong>Singapore</strong> and a network of branch offices and associates in different parts of the world. At Factorial, our objective is to help our clients maximize their business performance by providing them with an end-to-end solution.</p>
+				<!--<h5 class="section-subtitle">Welcome to Factorial Solutions</h5>-->					<h2 class="section-title" id="section-title"><span>About Us</span></h2>					<div class="section-desc"><p>We are one of the leading entrepreneurial expansion consulting organization with global headquarter in <strong>Singapore</strong> and a network of branch offices and associates in different parts of the world. At Factorial, our objective is to help our clients maximize their business performance by providing them with an end-to-end solution.</p>
 <p>Our job is to provide a wide array of services to match the complex and rapidly changing needs of our clients across different boundaries and industry segments.</p>
 <p>With Factorial you can <strong>Determine, Actualize, Humane</strong> and <strong>Expand</strong>.</p>
 </div>				</div>
@@ -174,7 +209,7 @@ challenges of today’s competitive business environment with proficiency.</p>
             <section id="services" class="section-features section-padding section-meta onepage-section" style="padding-top: 3%; padding-bottom: 3%">
         <div class="container">
                 <div class="section-title-area">
-         <!--   <h5 class="section-subtitle">What we provide?</h5>  -->          <h2 class="section-title">Our Services</h2>                    </div>
+         <!--   <h5 class="section-subtitle">What we provide?</h5>  -->          <h2 class="section-title" id="section-title"><span>Our Services</span></h2>                    </div>
                 <div class="section-content">
             <div class="row">
                             <div class="feature-item col-lg-3 col-sm-6 wow slideInUp" style="visibility: hidden; animation-name: none;">
@@ -278,7 +313,7 @@ challenges of today’s competitive business environment with proficiency.</p>
         
     <div class="g-layout-full-width container">
                     <div class="section-title-area">
-                <h5 class="section-subtitle">Section subtitle</h5>                <h2 class="section-title">Life@Factorial</h2>               <!--<div class="section-desc"><p>NEW: Gallery section support advanced layouts: Grid, Slider, Carousel, Masonry, Justified.</p>
+                <!--<h5 class="section-subtitle">Section subtitle</h5>-->                <h2 class="section-title" id="section-title"><span>Life@Factorial</span></h2>               <!--<div class="section-desc"><p>NEW: Gallery section support advanced layouts: Grid, Slider, Carousel, Masonry, Justified.</p>
 </div>-->            </div>
                 <div class="gallery-content">
             <div data-col="5" class="g-zoom-in gallery-masonry  enable-lightbox  gallery-grid g-col-5" style="position: relative; height: 410.176px;">
@@ -412,7 +447,7 @@ challenges of today’s competitive business environment with proficiency.</p>
             					<section id="contact" class="section-contact section-padding  section-meta onepage-section" style="padding-top: 3%; padding-bottom: 3%">
 								<div class="container">
 								<div class="section-title-area">
-				<!--	<h5 class="section-subtitle">Contact Us</h5> -->					<h2 class="section-title">Get in touch</h2>									</div>
+				<!--	<h5 class="section-subtitle">Contact Us</h5> -->					<h2 class="section-title" id="section-title"><span>Get in touch</span></h2>									</div>
 								<div class="row">
 																		<div class="contact-form col-sm-6 wow slideInUp" style="visibility: hidden; animation-name: none;">
 								<div class="wpforms-container wpforms-container-full" id="wpforms-1431"><form id="wpforms-form-1431" class="wpforms-validate wpforms-form" data-formid="1431" method="post" enctype="multipart/form-data" action="http://localhost/factorialsolutions/" novalidate="novalidate"><div class="wpforms-field-container"><div id="wpforms-1431-field_8-container" class="wpforms-field wpforms-field-select" data-field-id="8"><label class="wpforms-field-label" for="wpforms-1431-field_8">You are? <span class="wpforms-required-label">*</span></label><select id="wpforms-1431-field_8" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][8]" required="required"><option value="" class="placeholder" disabled="" selected="selected">--Select Option--</option><option value="A Candidate - Looking for a Job">A Candidate - Looking for a Job</option><option value="A Corporate - Looking for services">A Corporate - Looking for services</option><option value="A Visitor - With an inquiry">A Visitor - With an inquiry</option></select></div><div id="wpforms-1431-field_2-container" class="wpforms-field wpforms-field-name" data-field-id="2"><label class="wpforms-field-label" for="wpforms-1431-field_2">Name <span class="wpforms-required-label">*</span></label><div class="wpforms-field-row wpforms-field-medium"><div class="wpforms-field-row-block wpforms-first wpforms-one-half"><input type="text" id="wpforms-1431-field_2" class="wpforms-field-name-first wpforms-field-required" name="wpforms[fields][2][first]" placeholder="First Name" required=""><label for="wpforms-1431-field_2" class="wpforms-field-sublabel after wpforms-sublabel-hide">First</label></div><div class="wpforms-field-row-block wpforms-one-half"><input type="text" id="wpforms-1431-field_2-last" class="wpforms-field-name-last wpforms-field-required" name="wpforms[fields][2][last]" placeholder="Last Name" required=""><label for="wpforms-1431-field_2-last" class="wpforms-field-sublabel after wpforms-sublabel-hide">Last</label></div></div></div><div id="wpforms-1431-field_3-container" class="wpforms-field wpforms-field-text" data-field-id="3"><label class="wpforms-field-label" for="wpforms-1431-field_3">Organization</label><input type="text" id="wpforms-1431-field_3" class="wpforms-field-medium" name="wpforms[fields][3]" placeholder="Enter name of your Company /Organization"></div><div id="wpforms-1431-field_5-container" class="wpforms-field wpforms-field-email" data-field-id="5"><label class="wpforms-field-label" for="wpforms-1431-field_5">Email <span class="wpforms-required-label">*</span></label><input type="email" id="wpforms-1431-field_5" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][5]" placeholder="Enter your Email Address" required=""></div><div id="wpforms-1431-field_7-container" class="wpforms-field wpforms-field-textarea" data-field-id="7"><label class="wpforms-field-label" for="wpforms-1431-field_7">Message <span class="wpforms-required-label">*</span></label><textarea id="wpforms-1431-field_7" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][7]" placeholder="Enter your message / query" required=""></textarea></div></div><div class="wpforms-submit-container"><input type="hidden" name="wpforms[id]" value="1431"><input type="hidden" name="wpforms[author]" value="2"><input type="hidden" name="wpforms[post_id]" value="1367"><button type="submit" name="wpforms[submit]" class="wpforms-submit " id="wpforms-submit-1431" value="wpforms-submit" aria-live="assertive">Submit</button></div></form></div>  <!-- .wpforms-container -->						</div>
@@ -455,6 +490,44 @@ challenges of today’s competitive business environment with proficiency.</p>
 							</section>
 					</main><!-- #main -->
 	</div><!-- #content -->
+
+	<!--heading underline script jquery-->
+	<script id="jsbin-javascript">
+		/**
+		* inViewport jQuery plugin by Roko C.B. stackoverflow.com/questions/24768795/
+		*
+		* Returns a callback function with an argument holding
+		* the current amount of px an element is visible in viewport
+		* (The min returned value is 0 (element outside of viewport)
+		* The max returned value is the element height + borders)
+		*/
+		;(function($, win) {
+		$.fn.inViewport = function(cb) {
+			return this.each(function(i,el) {
+			function visPx(){
+				var elH = $(el).outerHeight(),
+					H = $(win).height(),
+					r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+				return cb.call(el, Math.max(0, t>0? Math.min(elH, H-t) : (b<H?b:H)));  
+			}
+			visPx();
+			$(win).on("resize scroll", visPx);
+			});
+		};
+		}(jQuery, window));
+
+
+
+		// Rock'n Roll!
+		$("h2#section-title span").inViewport(function(px){
+			$(this).toggleClass("animateLine", !!px);
+		});
+	</script>
+
+	<!--heading underline jquery ends-->
+
+
+
 
     <footer id="colophon" class="site-footer" role="contentinfo">
         				<div class="footer-connect">
