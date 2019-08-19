@@ -3125,10 +3125,11 @@ div.wpcf7-response-output {
   line-height: 1;
 }
 .section-videolightbox .video_icon:hover {
-  background: #FFFFFF;
+  background: #FF0000;
+  border-color: #FF0000;
 }
 .section-videolightbox .video_icon:hover i {
-  color: #000;
+  color: #FFFFFF;
 }
 
 /* Section: Gallery

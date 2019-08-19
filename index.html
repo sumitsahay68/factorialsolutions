@@ -84,9 +84,6 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 <!--underline heading script imports and css-->
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <style id="jsbin-css">
-h2#section-title{
- text-align:center;
-}
 h2#section-title span{
   display:inline-block;
   position:relative;
@@ -94,24 +91,30 @@ h2#section-title span{
 }
 h2#section-title span:after,
 h2#section-title span:before{
-  content:"";
-  height:3px;
-  width:100%;
-  position:absolute;
-  bottom:0px;
-  left:0;
-  transition: 3s;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 2s ease-in-out 0s;
+  transition: all 2s ease-in-out 0s;
 }
 h2#section-title span:before{
-  background:#ffffff;
+  background:transparent;	
 }
 /* We'll animate this one to -75% */
 h2#section-title span:after{ 
   background:#FE0700;
-  left:100%;
 }
 h2#section-title span.animateLine:after{
-  left: -0%;
+ visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 </style>
 <!--underline import ends-->
@@ -250,7 +253,7 @@ challenges of today’s competitive business environment with proficiency.</p>
 								<!--OTHER-SERVICES-->
 			                    <section id="other_services" class="section-services section-padding section-meta onepage-section" style="padding-top: 3%; padding-bottom: 3%">                        <div class="container">
                                 <div class="section-title-area">
-                 <!--   <h5 class="section-subtitle">We also provide...</h5>  -->                  <h2 class="section-title">Other Services</h2>                                    </div>
+                 <!--   <h5 class="section-subtitle">We also provide...</h5>  -->                  <h2 class="section-title" id="section-title"><span>Other Services</span></h2>                                    </div>
                                 <div class="row">
                                                 <div class="col-sm-6 col-lg-6 wow slideInUp" style="visibility: hidden; animation-name: none;">
                                                 	<!--
