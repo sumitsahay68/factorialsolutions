@@ -71,6 +71,43 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 			<!--SOCIAL IMPS END-->
 		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 <!--COMMON-ENDS-->
+<!--underline heading script imports and css-->
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<style id="jsbin-css">
+h2#section-title span{
+  display:inline-block;
+  position:relative;
+  overflow:hidden;
+}
+h2#section-title span:after,
+h2#section-title span:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 2s ease-in-out 0s;
+  transition: all 2s ease-in-out 0s;
+}
+h2#section-title span:before{
+  background:transparent;	
+}
+/* We'll animate this one to -75% */
+h2#section-title span:after{ 
+  background:#FE0700;
+}
+h2#section-title span.animateLine:after{
+ visibility: visible;
+  -webkit-transform: scaleX(0.75);
+  transform: scaleX(0.75);
+}
+</style>
+<!--underline import ends-->
 		<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
 
 <body class="page-template-default page page-id-1606 wp-custom-logo body-desktop">
@@ -106,10 +143,7 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 				</div>
 			</div>
 		</header></div><!-- #masthead -->
-		</div>					<div class="page-header">
-				<div class="container">
-					<h1 class="entry-title">Legal Disclaimer</h1>				</div>
-			</div>
+		</div>					
 					<div id="content" class="site-content">
         		<div id="content-inside" class="container right-sidebar">
 			<div id="primary" class="content-area">
@@ -125,7 +159,15 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 		
 <figure class="wp-block-image"><img src="./legal-disclaimer_files/disclaimer-factorial.jpg" alt="Legal Disclaimer" class="wp-image-1615" srcset="./legal-disclaimer_files/disclaimer-factorial.jpg 960w, ./legal-disclaimer_files/disclaimer-factorial-300x76.jpg 300w, ./legal-disclaimer_files/disclaimer-factorial-768x194.jpg 768w" sizes="(max-width: 960px) 100vw, 960px"></figure>
 
-
+<h2 class="section-title" id="section-title" style="font-size: 30px;
+  padding-top: 2px;
+  padding-bottom: 5px; 	
+  letter-spacing: 2px;
+  font-weight: 800;
+  position: relative;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  text-align:center"><span>Legal Disclaimer</span></h2>
 
 <p>The information and materials contained on this site may be inaccurate and/or contain typographical errors. We do not provide legal, accounting or financial advice and all of the services, products, information and materials provided on this site are provided for informational purposes only. We do not warrant the accuracy or completeness of the information and materials or the reliability of any advice, opinion, statement or other information displayed or distributed through this site. If you rely on any such opinion, advice, statement, article, memorandum, or information, you do so at your own risk.</p>
 
@@ -145,7 +187,42 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 				</main><!-- #main -->
 			</div><!-- #primary -->
 
-                            
+
+  <!--heading underline script jquery-->
+	<script id="jsbin-javascript">
+		/**
+		* inViewport jQuery plugin by Roko C.B. stackoverflow.com/questions/24768795/
+		*
+		* Returns a callback function with an argument holding
+		* the current amount of px an element is visible in viewport
+		* (The min returned value is 0 (element outside of viewport)
+		* The max returned value is the element height + borders)
+		*/
+		;(function($, win) {
+		$.fn.inViewport = function(cb) {
+			return this.each(function(i,el) {
+			function visPx(){
+				var elH = $(el).outerHeight(),
+					H = $(win).height(),
+					r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+				return cb.call(el, Math.max(0, t>0? Math.min(elH, H-t) : (b<H?b:H)));  
+			}
+			visPx();
+			$(win).on("resize scroll", visPx);
+			});
+		};
+		}(jQuery, window));
+
+
+
+		// Rock'n Roll!
+		$("h2#section-title span").inViewport(function(px){
+			$(this).toggleClass("animateLine", !!px);
+		});
+	</script>
+
+	<!--heading underline jquery ends-->
+
 <div id="secondary" class="widget-area sidebar" role="complementary">
 	<aside id="search-2" class="widget widget_search">
 	<!--
