@@ -79,6 +79,35 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 <link rel="stylesheet" href="index_files/morphext/morphext.css">
 <!--morphext import ends-->
 
+<style>
+
+a.location{
+	float: right;
+	text-align: right;
+	padding-left: 10px;
+	padding-top: 8%;
+	height: 25%;
+	width: 25%;
+}
+img.location_icon{
+	float: right;
+}	
+@media screen and (min-width: 769px){
+	a.location{
+		visibility: hidden;
+		display: none;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	iframe.gmaps{
+		visibility: hidden;
+		display: none;
+	}
+}
+</style>
+
 <!--underline heading script imports and css-->
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <style id="jsbin-css">
@@ -503,10 +532,12 @@ challenges of today’s competitive business environment with proficiency.</p>
 <p>Looking forward to hear from you…</p>
 <p><a href="./our-offices.html">Click here to see our Offices</a></p>
 						<br><br>-->
-						<div class="address-box-area" style="float:left">
+						<!--<div class="address-box-area" style="float:left">-->
 						<div class="address-box" style="line-height: 1.5;">
 
-							<h3 style="font-weight:500">Corporate Headquarter (Singapore)</h3>
+							<h3 style="font-weight:500;margin-bottom: 10px">Corporate Headquarter (Singapore)</h3>
+							<iframe src="./index_files/googleMap1.html" width="220px" height="220px" frameborder="0" class="gmaps" style="border-radius:50%;float: right;" allowfullscreen=""></iframe>
+							<a href="https://goo.gl/maps/V94n2KiU286CCDLJ9" target="_blank" class="location"><img src="./index_files/location_icon.png" class="location_icon"></a>
 
 															<div class="address-contact">
 									<span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-map-marker fa-stack-1x fa-inverse"></i></span>
@@ -516,6 +547,7 @@ challenges of today’s competitive business environment with proficiency.</p>
 																#09-06, Tong Eng Building<br>
 																Singapore-069533</div>
 								</div>
+
 							
 															<div class="address-contact">
 									<span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span>
@@ -538,7 +570,9 @@ challenges of today’s competitive business environment with proficiency.</p>
 						<br><br>
 						<div class="address-box" style="line-height: 1.5;">
 
-							<h3 style="font-weight:500">Knowledge Centre (India)</h3>
+							<h3 style="font-weight:500;margin-bottom: 10px">Knowledge Centre (India)</h3>
+							<iframe src="./index_files/googleMap2.html" width="220px" height="220px" frameborder="0" class="gmaps" style="border-radius:50%;float: right;" allowfullscreen=""></iframe>
+							<a href="https://goo.gl/maps/v1HzmcB4et1YmdiWA" target="_blank" class="location"><img src="./index_files/location_icon.png" class="location_icon"></a>
 
 															<div class="address-contact">
 									<span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-map-marker fa-stack-1x fa-inverse"></i></span>
@@ -563,14 +597,14 @@ challenges of today’s competitive business environment with proficiency.</p>
 							
 													</div>
 
-						    </div><!--address area-->
+						    <!--</div>--><!--address area-->
 							<!--google maps-->
-							<div class="google-maps" style="float:right">
+						<!--	<div class="google-maps" style="float:right">
 								<br>
 								<iframe src="./index_files/googleMap1.html" width="220px" height="220px" frameborder="0" style="border-radius:50%" allowfullscreen=""></iframe>
 								<br><br>
 								<iframe src="./index_files/googleMap2.html" width="220px" height="220px" frameborder="0" style="border-radius:50%" allowfullscreen=""></iframe>
-							</div>
+							</div> -->
 							<!--google maps end-->
 					</div>
 				</div>
