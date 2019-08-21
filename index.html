@@ -74,12 +74,10 @@ var onepress_js_settings = {"onepress_disable_animation":"","onepress_disable_st
 		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 <!--COMMON-ENDS-->
 
-<!--hero text animate-->
-<link rel="stylesheet" href="./index_files/custom-anims/morphext.css">
+<!--morphext head imports-->
 <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
-<script src="./index_files/custom-anims/morphext.min.js"></script>
-
-<!--ends here-->
+<link rel="stylesheet" href="index_files/morphext/morphext.css">
+<!--morphext import ends-->
 
 <!--underline heading script imports and css-->
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
@@ -159,13 +157,47 @@ h2#section-title span.animateLine:after{
 		</header></div><!-- #masthead -->
 		<!--HERO-SECTION-->
 			<section id="hero" data-images="[&quot;.\/index_files\/banner1.jpg&quot;,&quot;.\/index_files\/banner2.jpg&quot;,&quot;.\/index_files\/banner3.jpg&quot;]" class="hero-slideshow-wrapper hero-slideshow-normal loaded" style="position: relative; z-index: 0; background: none;">
-
-					
 		
 						<div class="container" style="padding-top: 10%; padding-bottom: 10%;">
 					<div class="hero__content hero-content-style1">
 						<!--We Define Success, By re-defining Search , We are Factorial-->
-						<h2 class="hero-large-text"><span class="js-rotating morphext">We define| By re-defining | We are</span>&nbsp;<span class="js-rotating morphext" style="color:#F73138"><span class="animated flipInX">Success | Search | Factorial</span></span></h2>						<p class="hero-small-text"></p><p>Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin quisque vitae placerat.</p>
+						<h2 class="hero-large-text"><span id="js-rotating">We define| By re-defining | We are</span>&nbsp;<span id="js-rotating-colored" style="color:#F73138">Success | Search | Factorial</span></h2>	
+						
+						<!--jsrotating body imports-->
+
+						<script src="index_files/morphext/jquery.min.js"></script>
+						<script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+						<script src="index_files/morphext/morphext.js"></script>
+						<script>
+							$("#js-rotating").Morphext({
+							// The [in] animation type. Refer to Animate.css for a list of available animations.
+							animation: "flipInX",
+							// An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+							separator: "|",
+							// The delay between the changing of each phrase in milliseconds.
+							speed: 6150,
+							complete: function () {
+								// Called after the entrance animation is executed.
+							}
+						});
+							$("#js-rotating-colored").Morphext({
+							// The [in] animation type. Refer to Animate.css for a list of available animations.
+							animation: "flipInX",
+							// An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+							separator: "|",
+							// The delay between the changing of each phrase in milliseconds.
+							speed: 6150,
+							complete: function () {
+								// Called after the entrance animation is executed.
+							}
+						});
+						</script>
+
+						<!--jsrotating-body-imports-ends-->
+
+						
+						
+							<p class="hero-small-text"></p><p>Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin quisque vitae placerat.</p>
 <p></p>						<a href="./index.html/#services" class="btn btn-theme-primary btn-lg">Our Services</a>						<a href="./index.html/#contact" class="btn btn-secondary-outline btn-lg">Get Started</a>					</div>
 				</div>
 					<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 610px; width: 1519px; z-index: -999998; position: absolute;"><img src="./index_files/banner1.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1519px; height: 1012.67px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -201.333px;"></div></section>
